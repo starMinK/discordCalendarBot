@@ -8,6 +8,7 @@ import asyncio
 from discord.ext import tasks
 import datetime
 import google_api
+import os
 
 service = google_api.get_service()
 
@@ -149,4 +150,5 @@ async def Cancel_participation_event(ctx, eventId):
     await ctx.send('참여한 투표를 삭제하였습니다.', embed = embed)
 
 
-app.run('MTAxMjUxNzMzMTIzNjI5MDY0MA.Gtav1D.DLkhREEhDTDCmIKIWas3MNT43sCOuMhk3MFdRU')
+access_token = os.environ["BOT_TOKEN")
+app.run(access_token)
